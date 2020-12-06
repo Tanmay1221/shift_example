@@ -63,7 +63,7 @@ int main(){
         int choice;
         int binary[10];
         int sizeofbinary = 0;
-        printf("\nChoose the type of input you wish to give: \n1.Integer\n2.Binary\n");
+        printf("\nChoose the type of input you wish to give: \n1.Integer\n2.Binary\n3.Exit\n");
 	    printf("\n\nEnter your choice: ");
 	    scanf("%d",&choice);
         switch (choice)
@@ -106,6 +106,8 @@ int main(){
                     printf("%d\t",binary[i]);
                 }
             break;
+        case 3:
+                exit(0);
         default:
                 printf("\nPLEASE ENTER A VALID CHOICE");
             break;
