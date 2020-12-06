@@ -38,7 +38,7 @@ void arithmatic_rightShift(int binary[],int sizeofbinary){
     for(int i=0;i<rightshiftdigit;i++){
         printf("%d\t",binary[sizeofbinary-1]);
     }
-    for(int i=0;i<sizeofbinary-rightshiftdigit;i++){
+    for(int i=sizeofbinary-1;i>=rightshiftdigit;i--){
         printf("%d\t",binary[i]);
     }
 }
