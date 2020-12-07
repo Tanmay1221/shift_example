@@ -22,10 +22,11 @@ void logical_rightShift(int binary[],int sizeofbinary){
     printf("\nBy how many bits do you want to shift your binary number to the left?(logical left shift): ");
     int leftshiftdigit;
     scanf("%d",&leftshiftdigit);
-    for(int i = 0;i<leftshiftdigit;i++){
+    int i;
+    for(i = 0;i<leftshiftdigit;i++){
         printf("%d\t",0);
     }
-    for(int i=sizeofbinary-1;i>=leftshiftdigit;i--){
+    for(i=sizeofbinary-1;i>=leftshiftdigit;i--){
         printf("%d\t",binary[i]);
     }
 }
@@ -35,10 +36,11 @@ void arithmatic_rightShift(int binary[],int sizeofbinary){
     printf("\nBy how many bits do you want to shift your binary number to the right?(arithmatic right shift): ");
     int rightshiftdigit;
     scanf("%d",&rightshiftdigit);
-    for(int i=0;i<rightshiftdigit;i++){
+    int i;
+    for(i=0;i<rightshiftdigit;i++){
         printf("%d\t",binary[sizeofbinary-1]);
     }
-    for(int i=sizeofbinary-1;i>=rightshiftdigit;i--){
+    for(i=sizeofbinary-1;i>=rightshiftdigit;i--){
         printf("%d\t",binary[i]);
     }
 }
@@ -52,10 +54,11 @@ void logical_leftShift_and_arithmatic_leftShift(int binary[],int sizeofbinary,ch
     }
     int rightshiftdigit;
     scanf("%d",&rightshiftdigit);
-    for(int i=sizeofbinary - (rightshiftdigit + 1);i>=0;i--){
+    int i;
+    for(i=sizeofbinary - (rightshiftdigit + 1);i>=0;i--){
         printf("%d\t",binary[i]);
     }
-    for(int i = 0;i<rightshiftdigit;i++){
+    for(i = 0;i<rightshiftdigit;i++){
         printf("%d\t",0);
     }
 }
@@ -67,6 +70,7 @@ int main(){
         int choice;
         int binary[15]={0};
         int sizeofbinary = 16;
+        int i;
         printf("\nChoose the type of input you wish to give: \n1.Integer\n2.Binary\n3.Exit\n");
 	    printf("\n\nEnter your choice: ");
 	    scanf("%d",&choice);
@@ -81,7 +85,7 @@ int main(){
                 scanf("%d",&number);
                 number_before = number;
                 //convert to binary
-                for(int i=0;number>0;i++){
+                for(i=0;number>0;i++){
                     binary[i] = number%2;
                     number=number/2;
                     // sizeofbinary = sizeofbinary + 1;
@@ -91,7 +95,7 @@ int main(){
                     printf("Your binary number is: 0 0");
                 }else{
                     printf("Your binary number is: ");
-                    for (int i = sizeofbinary - 1; i >= 0 ; i--)
+                    for (i = sizeofbinary - 1; i >= 0 ; i--)
                     {
                         printf("%d\t",binary[i]);
                     }
@@ -102,11 +106,11 @@ int main(){
                 printf("\nHow many bits does your binary number have?: ");
                 scanf("%d",&sizeofbinary);
                 printf("\nEnter the binary bits one by one starting from msb: ");
-                for(int i = 0;i<sizeofbinary;i++){
+                for(i = 0;i<sizeofbinary;i++){
                     scanf("%d",&binary[i]);
                 }
                 printf("\nThis is the binary number you entered: ");
-                for(int i = 0;i<sizeofbinary;i++){
+                for(i = 0;i<sizeofbinary;i++){
                     printf("%d\t",binary[i]);
                 }
             break;
