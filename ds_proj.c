@@ -44,8 +44,12 @@ void arithmatic_rightShift(int binary[],int sizeofbinary){
 }
 
 //place zero at the end that much you want to shif and remove the same number of element from front
-void logical_leftShift_and_arithmatic_leftShift(int binary[],int sizeofbinary){
-    printf("\nBy how many bits do you want to shift your binary number to the right?(logical right shift): ");
+void logical_leftShift_and_arithmatic_leftShift(int binary[],int sizeofbinary,char shift){
+    if(shift == 'l'){
+        printf("\nBy how many bits do you want to shift your binary number to the right?(logical right shift): ");    
+    }else{
+        printf("\nBy how many bits do you want to shift your binary number to the right?(aithmatic right shift): ");    
+    }
     int rightshiftdigit;
     scanf("%d",&rightshiftdigit);
     for(int i=sizeofbinary - (rightshiftdigit + 1);i>=0;i--){
@@ -148,11 +152,11 @@ int main(){
                 {
                 case 1:
                     //logical left shift here 
-                    logical_leftShift_and_arithmatic_leftShift(binary,sizeofbinary);
+                    logical_leftShift_and_arithmatic_leftShift(binary,sizeofbinary,'l');
                     break;
                 case 2:
                     //arithmatic left shift here
-                    logical_leftShift_and_arithmatic_leftShift(binary,sizeofbinary);
+                    logical_leftShift_and_arithmatic_leftShift(binary,sizeofbinary,'a');
                     break;
                 default:
                     printf("\nPLEASE ENTER A VALID CHOICE");
