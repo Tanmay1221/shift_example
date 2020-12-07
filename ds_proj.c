@@ -61,8 +61,8 @@ int main(){
     while (1)
     {
         int choice;
-        int binary[10];
-        int sizeofbinary = 0;
+        int binary[15]={0};
+        int sizeofbinary = 16;
         printf("\nChoose the type of input you wish to give: \n1.Integer\n2.Binary\n3.Exit\n");
 	    printf("\n\nEnter your choice: ");
 	    scanf("%d",&choice);
@@ -72,7 +72,7 @@ int main(){
                 printf("Enter an integer number: ");
                 int number = 0;
                 // int binary[10];
-                sizeofbinary = 0;
+                // sizeofbinary = 0;
                 int number_before = 0;
                 scanf("%d",&number);
                 number_before = number;
@@ -80,7 +80,7 @@ int main(){
                 for(int i=0;number>0;i++){
                     binary[i] = number%2;
                     number=number/2;
-                    sizeofbinary = sizeofbinary + 1;
+                    // sizeofbinary = sizeofbinary + 1;
                 }
                 //print the binary number
                 if(number_before == 0){
